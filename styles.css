@@ -4,12 +4,14 @@
     margin: 0;
 }
 
+/* Inicio */
+
 .hero-container {
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-image: url('./img/background_cabecalho.jpg');
     background-attachment: fixed;
     background-position: center;
@@ -22,28 +24,6 @@ h1 {
     font-family: 'Oswald', sans-serif;
     color: #fff;
     font-size: 60px;
-}
-
-nav {
-    width: 50%;
-}
-
-ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    width: 700px;
-}
-
-li {
-    font-family: 'Oswald', sans-serif;
-    font-size: 21px;
-    color: #fff;
-    cursor: pointer;
-}
-
-li:hover {
-    color: #00bef8;
 }
 
 .arrows {
@@ -91,15 +71,12 @@ li:hover {
     -webkit-animation-delay:  0s;
 }
 
+/* Sobre */
+
 .content-container {
     height: 100vh;
     background-color: #333;
 }
-
-
-
-
-
 
 .profile-container {
     color: #333;
@@ -184,10 +161,7 @@ li:hover {
     font-size: 17px;
 }
 
-
-
-
-
+/* Experiência */
 
 .project-container {
     width: 100%;
@@ -255,9 +229,7 @@ li:hover {
     padding-left: 10px;
 }
 
-
-
-
+/* Contato */
 
 .form-container{
     width: 100%;
