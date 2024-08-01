@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-image: url('./luca-bravo-XJXWbfSo2f0-unsplash.jpg');
+    background-image: url('./img/background_cabecalho.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -107,7 +107,7 @@ li:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('./fabio-oyXis2kALVg-unsplash.jpg');
+    background-image: url('./img/background_sobre.jpg');
     background-size: cover;
 }
 
@@ -174,7 +174,7 @@ li:hover {
 
 .icon-item {
     width: 80px;
-    height: auto;
+    height: 80px;
 }
 
 .profile-sinopse {
@@ -187,13 +187,15 @@ li:hover {
 
 
 
+
+
 .project-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('./adi-goldstein-EUsVwEOsblE-unsplash.jpg');
+    background-image: url('./img/background_experiencia.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -250,7 +252,11 @@ li:hover {
 .project-text {
     color: white;
     font-family: 'Oswald', sans-serif;
+    padding-left: 10px;
 }
+
+
+
 
 
 .form-container{
