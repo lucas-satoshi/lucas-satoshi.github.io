@@ -96,6 +96,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 350px;
     background: #ffffff;
     padding: 30px;
@@ -155,10 +156,12 @@ h1 {
 }
 
 .profile-sinopse {
-    width: 430px;
+    width: 410px;
     font-family: 'Oswald', sans-serif;
     color: #fff;
     font-size: 17px;
+    text-align: justify;
+    background-color: #00000080;
 }
 
 /* Experiência */
@@ -215,8 +218,7 @@ h1 {
     height: auto;
     position: relative;
     border-radius: 8px;
-    right: 20px;
-    top: 40px;
+    left: 5px;
 }
 
 .image-reverse {
