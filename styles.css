@@ -4,6 +4,38 @@
     margin: 0;
 }
 
+/* Celular */
+
+@media (max-width: 600px) {
+    .hero-container {
+        width: 250%;
+    }
+    .profile-container {
+        width: 250%;
+    }
+    .project-container {
+        width: 250%;
+    }
+    #contato {
+        width: 250%;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .hero-container {
+        width: 110%;
+    }
+    .profile-container {
+        width: 110%;
+    }
+    .project-container {
+        width: 110%;
+    }
+    #contato {
+        width: 110%;
+    }
+}
+
 /* Inicio */
 
 .hero-container {
@@ -74,7 +106,7 @@ h1 {
 /* Sobre */
 
 .content-container {
-    height: 100vh;
+    height: 150vh;
     background-color: #333;
 }
 
@@ -167,7 +199,6 @@ h1 {
 /* Experiência */
 
 .project-container {
-    width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -233,38 +264,73 @@ h1 {
 
 /* Contato */
 
-.form-container{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+.content-container-contato {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#contato {
+    background-color: #444;
+    padding: 40px 0;
+}
+
+
+.form-container {
+    background-color: #555;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 form {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: #00bef8;
-    width: 500px;
-    height: 500px;
-    padding: 20px;
 }
 
 label {
-    display: block;
+    margin-bottom: 15px;
 }
 
-input {
-    display: block;
-    width: 100%;
-}
-
+input[type="email"],
+input[type="name"],
+input[type="phone"],
 textarea {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    min-width: 100%;
-    height: 300px;
+    width: 97.5%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #666;
+    color: #fff;
+    resize: vertical;
+}
 
+input[type="email"]::placeholder,
+input[type="name"]::placeholder,
+input[type="phone"]::placeholder,
+textarea::placeholder {
+    color: #bbb;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #008cba;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #005f7a;
 }
