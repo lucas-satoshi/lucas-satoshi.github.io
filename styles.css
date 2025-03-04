@@ -4,38 +4,6 @@
     margin: 0;
 }
 
-/* Celular */
-
-@media (max-width: 600px) {
-    .hero-container {
-        width: 250%;
-    }
-    .profile-container {
-        width: 250%;
-    }
-    .project-container {
-        width: 250%;
-    }
-    #contato {
-        width: 250%;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    .hero-container {
-        width: 110%;
-    }
-    .profile-container {
-        width: 110%;
-    }
-    .project-container {
-        width: 110%;
-    }
-    #contato {
-        width: 110%;
-    }
-}
-
 /* Inicio */
 
 .hero-container {
@@ -49,6 +17,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #f0f0f0;
     padding-top: 10px;
 }
 
@@ -56,6 +25,11 @@ h1 {
     font-family: 'Oswald', sans-serif;
     color: #fff;
     font-size: 60px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
 }
 
 .arrows {
@@ -122,6 +96,10 @@ h1 {
 
 .profile-content {
     width: 30%;
+    max-width: 100%; /* Garante que ocupe todo o espaço disponível */
+    padding: 20px; /* Adiciona espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding no tamanho total */
+    margin: 0 auto; /* Centraliza o conteúdo */
 }
 
 .profile-card {
@@ -131,8 +109,13 @@ h1 {
     justify-content: center;
     width: 350px;
     background: #ffffff;
-    padding: 30px;
+    padding: 16px;
     border-radius: 8px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .profile-image {
@@ -179,7 +162,9 @@ h1 {
 .icons-container {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .icon-item {
@@ -194,6 +179,10 @@ h1 {
     font-size: 17px;
     text-align: justify;
     background-color: #00000080;
+    word-wrap: break-word;
+    max-width: 90%;
+    margin: 16px auto; /* Centraliza e adiciona espaçamento */
+    line-height: 1.6; /* Melhora a legibilidade */
 }
 
 /* Experiência */
@@ -234,13 +223,19 @@ h1 {
     width: 700px;
     height: 200px;
     background-color: black;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    margin: 16px auto;
+    max-width: 90%;
+    border-radius: 8px;
+    padding: 16px;
+    box-sizing: border-box;
 }
 
-.card-reverse {
+.project-card.card-reverse {
     flex-direction: row-reverse;
 }
 
@@ -260,6 +255,8 @@ h1 {
     color: white;
     font-family: 'Oswald', sans-serif;
     padding-left: 10px;
+    overflow-wrap: break-word; /* Força a quebra de texto longo */
+    margin: 8px 0; /* Adiciona espaçamento entre o texto e os botões */
 }
 
 /* Contato */
@@ -333,4 +330,117 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color: #005f7a;
+}
+
+/* Responsividade para tablets */
+@media (max-width: 1024px) {
+    .hero-container {
+        flex-direction: column;
+        padding: 20px;
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .profile-content {
+        max-width: 95%; /* Evita que fique muito fino no mobile */
+        padding: 16px; /* Ajusta o espaçamento interno */
+    }
+
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+        max-width: 100%; /* Garante que o card preencha o container */
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    .project-card.card-reverse {
+        flex-direction: column;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+    }
+
+    .profile-sinopse {
+        max-width: 100%; /* Evita que o texto ultrapasse os limites */
+        padding: 0 16px; /* Espaçamento horizontal */
+        text-align: justify; /* Melhora a leitura no mobile */
+        margin: 20px auto;
+        font-size: 14px; /* Ajuste para texto menor */
+    }
+
+    .project-text {
+        margin-bottom: 16px;
+        word-break: break-word; /* Força a quebra de texto longo */
+    }
+}
+
+/* Responsividade para mobile */
+@media screen and (max-width: 768px) {
+    .hero-container {
+        padding: 10px;
+    }
+
+    .profile-content {
+        max-width: 95%; /* Evita que fique muito fino no mobile */
+        padding: 16px; /* Ajusta o espaçamento interno */
+    }
+
+    .profile-card {
+        max-width: 100%; /* Garante que o card preencha o container */
+        padding: 16px;
+        margin: 0 auto;
+    }
+
+    .icons-container {
+        flex-wrap: wrap;
+    }
+
+    .icons-container .icon-item {
+        width: 50px;
+        height: 50px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        max-width: 95%;
+        padding: 20px;
+        width: 90%;
+    }
+
+    .project-image {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .profile-sinopse {
+        max-width: 100%; /* Evita que o texto ultrapasse os limites */
+        padding: 0 16px; /* Espaçamento horizontal */
+        text-align: justify; /* Melhora a leitura no mobile */
+        margin: 20px auto;
+        font-size: 14px; /* Ajuste para texto menor */
+    }
+
+    .project-text {
+        margin-bottom: 16px;
+        word-break: break-word; /* Força a quebra de texto longo */
+    }
 }
