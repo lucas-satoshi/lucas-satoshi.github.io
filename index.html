@@ -1,233 +1,1297 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Oikawa | Portfólio Profissional</title>
+    <title>Lucas Satoshi Cipriano Oikawa | Engenharia de Software, IA & Direção Executiva</title>
+    
+    <!-- SEO & Metatags Estratégicas -->
+    <meta name="description" content="Portfólio de Lucas Satoshi Cipriano Oikawa: Diretor Executivo no Grupo Oikawa Empreendimentos, Desenvolvedor Full-Stack (Residente SOFTEX/TrendsIT na ART IT), Engenheiro de Computação e pesquisador premiado.">
+    <meta name="keywords" content="Lucas Satoshi, Lucas Oikawa, Grupo Oikawa Empreendimentos, GO Tech, Desenvolvedor Full Stack, Engenheiro de Software, Delphi, React, Python, Cloud AWS, Azure, IoT, Lattes">
+    <meta name="author" content="Lucas Satoshi Cipriano Oikawa">
+    <link rel="canonical" href="https://lucas-satoshi.github.io/">
+
+    <!-- Open Graph / Redes Sociais (LinkedIn, WhatsApp, etc) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lucas-satoshi.github.io/">
+    <meta property="og:title" content="Lucas Satoshi Cipriano Oikawa | Engenheiro de Software & Diretor Executivo">
+    <meta property="og:description" content="Inovação tecnológica, desenvolvimento Full Stack, sistemas de alta confiabilidade e liderança executiva no Grupo Oikawa Empreendimentos.">
+    <meta property="og:image" content="./img/sobre_lucas.jpg">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lucas Satoshi Cipriano Oikawa | Engenheiro de Software & Diretor Executivo">
+    <meta name="twitter:description" content="Conheça a trajetória técnica, pesquisas científicas e os empreendimentos do Grupo Oikawa liderados por Lucas Satoshi.">
+    <meta name="twitter:image" content="./img/sobre_lucas.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./img/oikawa_logo_icon.png">
+
+    <!-- Tipografia Moderna (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Estilos Principais -->
     <link rel="stylesheet" href="./styles.css">
+
+    <!-- Schema.org Structured Data (JSON-LD) para SEO Avançado -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://lucas-satoshi.github.io/#person",
+          "name": "Lucas Satoshi Cipriano Oikawa",
+          "alternateName": "Lucas Oikawa",
+          "jobTitle": "Diretor Executivo e Desenvolvedor Full-Stack",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Grupo Oikawa Empreendimentos (OIKAWA EMPREENDIMENTOS LTDA)",
+            "url": "https://goempreendimentos.com/"
+          },
+          "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "UNIVESP - Universidade Virtual do Estado de São Paulo" },
+            { "@type": "CollegeOrUniversity", "name": "UNINTER Centro Universitário Internacional" },
+            { "@type": "CollegeOrUniversity", "name": "IFSP - Instituto Federal de São Paulo" }
+          ],
+          "sameAs": [
+            "https://www.linkedin.com/in/lucas-oikawa",
+            "https://github.com/lucas-satoshi",
+            "http://lattes.cnpq.br/8887073539480367",
+            "https://orcid.org/0000-0003-2921-8997",
+            "https://goempreendimentos.com/"
+          ]
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://goempreendimentos.com/#organization",
+          "name": "Grupo Oikawa Empreendimentos",
+          "legalName": "OIKAWA EMPREENDIMENTOS LTDA",
+          "taxID": "57.030.230/0001-10",
+          "url": "https://goempreendimentos.com/",
+          "founder": { "@id": "https://lucas-satoshi.github.io/#person" },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. das Américas 4200, Bloco 01, Sala 305",
+            "addressLocality": "Rio de Janeiro",
+            "addressRegion": "RJ",
+            "postalCode": "22640-907",
+            "addressCountry": "BR"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
-    <header class="site-header">
+    <!-- Barra de Progresso de Leitura -->
+    <div id="scroll-progress" class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Cabeçalho de Navegação Fixo e Responsivo -->
+    <header class="site-header" id="header">
         <div class="header-container">
-            <div class="logo">
-                <a href="#inicio">Lucas Satoshi</a>
-            </div>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="#sobre">Sobre Mim</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#experiencia">Experiência</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contato">Contato</a></li>
+            <a href="#inicio" class="brand-logo" aria-label="Voltar ao início">
+                <span class="logo-mark">LS</span>
+                <span class="logo-text">Lucas <strong>Satoshi</strong></span>
+            </a>
+
+            <!-- Navegação Desktop -->
+            <nav class="desktop-nav" aria-label="Navegação principal">
+                <ul class="nav-links">
+                    <li><a href="#empresa" class="nav-link special-link">Grupo Oikawa</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#experiencia" class="nav-link">Trajetória</a></li>
+                    <li><a href="#pesquisa" class="nav-link">Pesquisa & Prêmios</a></li>
+                    <li><a href="#habilidades" class="nav-link">Competências</a></li>
+                    <li><a href="#portfolio" class="nav-link">Projetos</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
+
+            <!-- Ações Rápidas: Alternador de Tema + Botão Empresa + Menu Hambúrguer -->
+            <div class="header-actions">
+                <button id="theme-toggle" class="icon-btn" aria-label="Alternar modo claro e escuro" title="Alternar tema">
+                    <svg class="sun-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+
+                <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="btn-company-header" title="Acessar o portal do Grupo Oikawa">
+                    <span class="pulse-indicator"></span>
+                    <span>goempreendimentos.com</span>
+                    <svg class="icon-ext" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+
+                <button id="menu-toggle" class="mobile-menu-btn" aria-label="Abrir menu de navegação" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Drawer -->
+        <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
+            <ul class="mobile-nav-links">
+                <li><a href="#inicio" class="mobile-link">Início</a></li>
+                <li><a href="#empresa" class="mobile-link special-mobile-link">🏢 Grupo Oikawa Empreendimentos</a></li>
+                <li><a href="#sobre" class="mobile-link">Sobre Mim</a></li>
+                <li><a href="#experiencia" class="mobile-link">Trajetória Profissional</a></li>
+                <li><a href="#pesquisa" class="mobile-link">Pesquisa Científica & Prêmios</a></li>
+                <li><a href="#habilidades" class="mobile-link">Competências & Stack</a></li>
+                <li><a href="#portfolio" class="mobile-link">Projetos & Portfólio</a></li>
+                <li><a href="#contato" class="mobile-link">Contato Direto</a></li>
+                <li class="mobile-action-item">
+                    <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="btn-primary full-width">
+                        Visitar goempreendimentos.com ↗
+                    </a>
+                </li>
+            </ul>
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
+        <!-- =========================================
+             HERO SECTION (APRESENTAÇÃO EXECUTIVA)
+             ========================================= -->
         <section id="inicio" class="hero-section">
-            <div class="hero-content">
-                <h1>Lucas Satoshi Cipriano Oikawa</h1>
-                <p class="subtitle">Full Stack Developer & Diretor de Tecnologia</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/lucas-oikawa/" target="_blank" aria-label="LinkedIn">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                    <a href="https://github.com/lucas-satoshi" target="_blank" aria-label="GitHub">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                    </a>
+            <div class="hero-backdrop"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badges">
+                        <span class="status-chip">
+                            <span class="status-dot"></span>
+                            Disponível para Projetos Estratégicos & Consultoria Tech
+                        </span>
+                        <span class="role-badge">CEO @ Grupo Oikawa | Full Stack @ ART IT</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Lucas Satoshi <span class="gradient-text">Cipriano Oikawa</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        <strong>Desenvolvedor Full-Stack</strong>, <strong>Engenheiro de Software & IA</strong> e <strong>Fundador / Diretor Executivo</strong> no <strong>Grupo Oikawa Empreendimentos</strong>. Especialista em arquiteturas escaláveis em nuvem, sistemas de alta estabilidade (Delphi/Pascal, Node.js, Python), automação inteligente e governança de dados.
+                    </p>
+
+                    <!-- Métricas / Indicadores Rápidos -->
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <span class="metric-num">5</span>
+                            <span class="metric-label">Unidades de Negócio no Grupo</span>
+                        </div>
+                        <div class="metric-separator"></div>
+                        <div class="metric-item">
+                            <span class="metric-num">15+</span>
+                            <span class="metric-label">Medalhas & Distinções Científicas</span>
+                        </div>
+                        <div class="metric-separator"></div>
+                        <div class="metric-item">
+                            <span class="metric-num">SOFTEX</span>
+                            <span class="metric-label">Residência Tech TrendsIT 2026</span>
+                        </div>
+                        <div class="metric-separator"></div>
+                        <div class="metric-item">
+                            <span class="metric-num">CNPq</span>
+                            <span class="metric-label">Pesquisa & Iniciação Científica</span>
+                        </div>
+                    </div>
+
+                    <!-- Chamadas para Ação Primárias -->
+                    <div class="hero-cta-group">
+                        <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="btn-primary hero-btn">
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M6 11h2M6 15h2M10 11h2M10 15h2M14 11h2M14 15h2M18 11h2M18 15h2M9 3l3-2 3 2v4H9V3z"></path></svg>
+                            Conhecer a Empresa (goempreendimentos.com)
+                        </a>
+                        <a href="#portfolio" class="btn-secondary hero-btn">
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            Ver Portfólio & Código
+                        </a>
+                        <a href="http://lattes.cnpq.br/8887073539480367" target="_blank" rel="noopener noreferrer" class="btn-outline hero-btn" title="Acessar Currículo Lattes Oficial">
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            Currículo Lattes (CNPq)
+                        </a>
+                    </div>
+
+                    <!-- Links Rápidos de Conexão -->
+                    <div class="hero-social-strip">
+                        <span class="social-label">Conexões Oficiais:</span>
+                        <div class="social-links-row">
+                            <a href="https://www.linkedin.com/in/lucas-oikawa" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/lucas-satoshi" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://orcid.org/0000-0003-2921-8997" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="ORCID">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.364H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.182 0 2.94-2.109 5.182-5.334 5.182h-3.91V7.416zm1.444 1.444v7.476h2.466c2.475 0 3.869-1.547 3.869-3.738 0-2.128-1.394-3.738-3.869-3.738h-2.466z"/></svg>
+                                <span>ORCID</span>
+                            </a>
+                            <a href="https://wa.me/5521920023944?text=Ol%C3%A1%20Lucas%2C%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="social-pill whatsapp-pill" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                                <span>(21) 92002-3944</span>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-                <svg class="arrows" viewBox="0 0 60 72">
-                    <path class="a1" d="M0 0 L30 32 L60 0"></path>
-                    <path class="a2" d="M0 20 L30 52 L60 20"></path>
-                </svg>
+
+                <!-- Card de Perfil Lateral Flutuante -->
+                <div class="hero-card-wrapper">
+                    <div class="profile-card">
+                        <div class="profile-photo-container">
+                            <img src="./img/sobre_lucas.jpg" alt="Foto profissional de Lucas Satoshi Cipriano Oikawa" class="profile-photo">
+                            <div class="profile-overlay-badge">
+                                <span class="badge-role">Sócio Administrador</span>
+                                <span class="badge-org">Grupo Oikawa</span>
+                            </div>
+                        </div>
+                        <div class="profile-card-body">
+                            <h3 class="profile-card-name">Lucas Satoshi C. Oikawa</h3>
+                            <p class="profile-card-title">Full Stack Engineer & Tech Leader</p>
+                            
+                            <div class="quick-credentials">
+                                <div class="cred-item">
+                                    <span class="cred-icon">🏛️</span>
+                                    <span>UNIVESP & UNINTER (Eng. & TI IoT)</span>
+                                </div>
+                                <div class="cred-item">
+                                    <span class="cred-icon">⚡</span>
+                                    <span>IFSP Tupã (Técnico Eletrônica)</span>
+                                </div>
+                                <div class="cred-item">
+                                    <span class="cred-icon">📍</span>
+                                    <span>Barra da Tijuca, Rio de Janeiro - RJ</span>
+                                </div>
+                            </div>
+
+                            <div class="copy-email-box">
+                                <span class="email-text">lucas.satoshi.18@gmail.com</span>
+                                <button class="btn-copy-email" id="copy-email-btn" title="Copiar e-mail" aria-label="Copiar endereço de e-mail">
+                                    <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                    <span class="copy-tooltip" id="copy-tooltip">Copiar</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- =========================================
+             SEÇÃO DESTAQUE EMPRESA: GRUPO OIKAWA
+             ========================================= -->
+        <section id="empresa" class="company-section">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-tag">Holding & Empreendedorismo</span>
+                    <h2 class="section-title">Grupo Oikawa Empreendimentos</h2>
+                    <p class="section-subtitle">
+                        Holding empresarial sob a razão social <strong>OIKAWA EMPREENDIMENTOS LTDA</strong> (CNPJ: 57.030.230/0001-10). Atuo como <strong>Sócio Administrador e Diretor Executivo (CEO)</strong>, liderando um ecossistema integrado que une engenharia de software sob medida, capacitação tech, consórcios estratégicos, publicações e inovação em entretenimento digital.
+                    </p>
+                </div>
+
+                <!-- Banner Principal da Empresa com Chamada Direta e Logo Oficial -->
+                <div class="company-showcase-card">
+                    <div class="showcase-content">
+                        <div class="showcase-header-row">
+                            <div class="company-brand-badge">
+                                <img src="./img/oikawa_logo_icon.png" alt="Logotipo Grupo Oikawa" class="showcase-brand-icon" onerror="this.style.display='none'">
+                                <div>
+                                    <span class="company-corp-name">OIKAWA EMPREENDIMENTOS LTDA</span>
+                                    <h3 class="showcase-title">Ecossistema Multidisciplinar de Negócios & Tecnologia</h3>
+                                </div>
+                            </div>
+                            <span class="location-badge">📍 Barra da Tijuca — Rio de Janeiro / RJ</span>
+                        </div>
+                        <p class="showcase-desc">
+                            Estruturado para fornecer soluções de ponta a ponta: desde arquitetura e desenvolvimento de plataformas robustas para empresas em todo o território nacional até consultoria em planejamento financeiro e patrimonial.
+                        </p>
+                        <div class="showcase-actions">
+                            <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="btn-primary highlight-btn">
+                                <span>Acessar Portal Oficial (goempreendimentos.com)</span>
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                            </a>
+                            <a href="https://goempreendimentos.com/assets/oikawa-logo-full-CoRgbYdO.png" target="_blank" rel="noopener noreferrer" class="btn-outline-clean">
+                                Visualizar Identidade do Grupo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grade das 5 Unidades de Negócio -->
+                <div class="business-units-grid">
+                    <!-- 1. GO Tech -->
+                    <div class="unit-card">
+                        <div class="unit-card-header">
+                            <div class="unit-icon tech-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <span class="unit-tag">Tecnologia & Software</span>
+                        </div>
+                        <h4 class="unit-name">GO Tech</h4>
+                        <p class="unit-desc">
+                            Desenvolvimento de software sob medida, microsserviços, automação de processos corporativos, integrações de APIs complexas, diagnósticos tecnológicos e arquiteturas escaláveis em nuvem (AWS & Azure).
+                        </p>
+                        <ul class="unit-features">
+                            <li>Engenharia Full-Stack & APIs REST</li>
+                            <li>Automação de fluxos & Webhooks</li>
+                            <li>Diagnóstico tecnológico gratuito para empresas</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. GO Academy -->
+                    <div class="unit-card">
+                        <div class="unit-card-header">
+                            <div class="unit-icon academy-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                            </div>
+                            <span class="unit-tag">Educação & Treinamentos</span>
+                        </div>
+                        <h4 class="unit-name">GO Academy</h4>
+                        <p class="unit-desc">
+                            Formação técnica e aceleração contínua de desenvolvedores e profissionais digitais. Treinamentos corporativos em programação, inteligência artificial aplicada, boas práticas de engenharia e liderança ágil.
+                        </p>
+                        <ul class="unit-features">
+                            <li>Capacitação prática em linguagens modernas</li>
+                            <li>Mentoria técnica orientada a desafios de mercado</li>
+                            <li>Workshops e formação para times de TI</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. GO Consórcio -->
+                    <div class="unit-card">
+                        <div class="unit-card-header">
+                            <div class="unit-icon consorcio-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                            </div>
+                            <span class="unit-tag">Planejamento Patrimonial</span>
+                        </div>
+                        <h4 class="unit-name">GO Consórcio</h4>
+                        <p class="unit-desc">
+                            Consultoria estratégica em planejamento financeiro e aquisição programada de patrimônio. Soluções estruturadas em consórcios imobiliários, veículos pesados, frotas e expansão de infraestrutura física.
+                        </p>
+                        <ul class="unit-features">
+                            <li>Planejamento de investimentos sem juros abusivos</li>
+                            <li>Estratégias de lances e alavancagem de capital</li>
+                            <li>Atendimento personalizado corporativo e pessoal</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. GO Editora -->
+                    <div class="unit-card">
+                        <div class="unit-card-header">
+                            <div class="unit-icon editora-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            </div>
+                            <span class="unit-tag">Publicações & Conteúdo</span>
+                        </div>
+                        <h4 class="unit-name">GO Editora</h4>
+                        <p class="unit-desc">
+                            Publicação, editoração e difusão de literatura técnica, científica, pedagógica e acadêmica. Produção de materiais de alto valor instrucional com rigor conceitual e excelência visual.
+                        </p>
+                        <ul class="unit-features">
+                            <li>Publicações científicas e manuais práticos</li>
+                            <li>Materiais didáticos em STEM e Computação</li>
+                            <li>Distribuição multicanal física e digital</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5. Nyro Games -->
+                    <div class="unit-card">
+                        <div class="unit-card-header">
+                            <div class="unit-icon games-icon">
+                                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><line x1="6" y1="12" x2="10" y2="12"></line><line x1="8" y1="10" x2="8" y2="14"></line><line x1="15" y1="13" x2="15.01" y2="13"></line><line x1="18" y1="11" x2="18.01" y2="11"></line></svg>
+                            </div>
+                            <span class="unit-tag">Jogos & Entretenimento</span>
+                        </div>
+                        <h4 class="unit-name">Nyro Games</h4>
+                        <p class="unit-desc">
+                            Estúdio focado no desenvolvimento de jogos digitais, narrativas interativas, gamificação empresarial e experiências lúdicas imersivas com base em mecânicas inovadoras e design de gameplay refinado.
+                        </p>
+                        <ul class="unit-features">
+                            <li>Game design, prototipação ágil e arte digital</li>
+                            <li>Sistemas de gamificação corporativa sob demanda</li>
+                            <li>Pesquisa em engajamento e experiência do usuário</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Faixa Corporativa de Transparência -->
+                <div class="company-footer-strip">
+                    <div class="corp-info-block">
+                        <strong>Razão Social:</strong> OIKAWA EMPREENDIMENTOS LTDA &bull; 
+                        <strong>CNPJ:</strong> 57.030.230/0001-10 &bull; 
+                        <strong>Endereço:</strong> Av. das Américas 4200, Bloco 01, Sala 305 — Barra da Tijuca, Rio de Janeiro / RJ
+                    </div>
+                    <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="text-link-arrow">
+                        Visitar Portal Completo do Grupo &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SEÇÃO SOBRE MIM (PERFIL TÉCNICO & PESQUISA)
+             ========================================= -->
         <section id="sobre" class="about-section">
             <div class="container">
-                <h2 class="section-title">Sobre Mim</h2>
-                <div class="about-grid">
-                    <div class="about-image">
-                        <img src="./img/sobre_lucas.jpg" alt="Foto de perfil de Lucas Oikawa">
-                    </div>
-                    <div class="about-text">
-                        <p>Sou um profissional multidisciplinar em tecnologia e inovação. Minha trajetória transita entre o desenvolvimento <strong>Full Stack</strong>, <strong>Cloud Computing</strong> e gestão ágil de projetos. Atuo diretamente para aliar inovação tecnológica a estratégias que geram impacto real e mensurável.</p>
-                        <p>Atualmente ocupo o cargo de Diretor de Tecnologia e Fundador da GO Tech (OIKAWA EMPREENDIMENTOS LTDA). Academicamente, carrego forte bagagem pelo IFSP (Técnico), Escola Técnica FAT (Técnico), UNIVESP (Bacharelado em TI com ênfase em IoT e Engenharia de Computação) e UniFatecie (Música).</p>
-                        <div class="institutions-logos">
-                            <img src="./img/sobre_ifsp.png" alt="Instituto Federal SP" class="inst-logo">
-                            <img src="./img/sobre_univesp.png" alt="UNIVESP" class="inst-logo">
-                            <img src="./img/sobre_senai.png" alt="SENAI" class="inst-logo">
+                <div class="about-layout">
+                    <div class="about-text-column">
+                        <span class="section-tag">Perfil & Visão</span>
+                        <h2 class="section-title text-left">Liderança Executiva & Rigor Científico em Engenharia</h2>
+                        
+                        <div class="about-paragraphs">
+                            <p>
+                                Minha atuação profissional combina <strong>liderança empresarial</strong>, <strong>engenharia de software de missão crítica</strong> e <strong>pesquisa científica aplicada</strong>. Como Diretor Executivo da OIKAWA EMPREENDIMENTOS LTDA, lidero estratégias comerciais e de produto para soluções de tecnologia e negócios. No desenvolvimento de software, construo desde sistemas desktop em Delphi até arquiteturas modernas de nuvem (AWS/Azure) e aplicações Full-Stack em Node.js, React e Python.
+                            </p>
+                            <p>
+                                Atualmente sou <strong>Bolsista Residente em Desenvolvimento Full Stack na ART IT Intelligent Technology</strong>, atuando pelo programa <strong>TrendsIT 2026</strong> financiado pela <strong>SOFTEX</strong>, onde componho equipes ágeis, conduzo análises de requisitos, arquitetura técnica e revisões colaborativas de código (Peer Assessment).
+                            </p>
+                            <p>
+                                Minha sólida trajetória inclui pesquisas apoiadas pelo <strong>CNPq</strong> e pelo <strong>IFSP</strong> em robótica, simulação genética em <strong>linguagem R</strong>, automação de reatores com <strong>IoT / Arduino</strong> e inteligência artificial. Essa vivência em olimpíadas do conhecimento (com mais de 15 medalhas e menções honrosas) forjou minha capacidade de solucionar problemas complexos sob alta pressão e regras rigorosas.
+                            </p>
+                        </div>
+
+                        <!-- Pilares de Atuação -->
+                        <div class="pillars-grid">
+                            <div class="pillar-card">
+                                <div class="pillar-number">01</div>
+                                <h4>Engenharia & Arquitetura</h4>
+                                <p>Sistemas resilientes, microsserviços, Delphi/Pascal corporativo, APIs REST com autenticação segura e computação em nuvem.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-number">02</div>
+                                <h4>Visão de Negócios & Gestão</h4>
+                                <p>Liderança de equipes multidisciplinares com Scrum, gestão orientada a métricas (Power BI) e captação de recursos via editais técnicos.</p>
+                            </div>
+                            <div class="pillar-card">
+                                <div class="pillar-number">03</div>
+                                <h4>Inovação & Investigação</h4>
+                                <p>Iniciação científica com publicações em periódicos, IoT embarcado, simulação de dados genéticos e governança LGPD.</p>
+                            </div>
+                        </div>
+
+                        <!-- Logos das Instituições de Formação -->
+                        <div class="education-summary">
+                            <h4 class="edu-heading">Formação Acadêmica & Instituições de Referência:</h4>
+                            <div class="institutions-row">
+                                <div class="inst-pill" title="UNINTER - Bacharelado em Engenharia de Computação (2026 - 2030)">
+                                    <span class="inst-name">UNINTER</span>
+                                    <span class="inst-course">Engenharia de Computação</span>
+                                </div>
+                                <div class="inst-pill" title="UNIVESP - Bacharelado em TI (Ênfase em IoT) - Formado">
+                                    <span class="inst-name">UNIVESP</span>
+                                    <span class="inst-course">Bacharelado TI (IoT)</span>
+                                </div>
+                                <div class="inst-pill" title="IFSP Tupã - Técnico em Eletrônica Integrado">
+                                    <span class="inst-name">IFSP Tupã</span>
+                                    <span class="inst-course">Técnico em Eletrônica</span>
+                                </div>
+                                <div class="inst-pill" title="UniFatecie - Licenciatura em Música">
+                                    <span class="inst-name">UniFatecie</span>
+                                    <span class="inst-course">Licenciatura em Música</span>
+                                </div>
+                                <div class="inst-pill" title="Escola Técnica FAT - Técnico em Administração">
+                                    <span class="inst-name">Fundação FAT</span>
+                                    <span class="inst-course">Téc. Administração</span>
+                                </div>
+                                <div class="inst-pill" title="SOFTEX / TrendsIT 2026 - Residência Tecnológica">
+                                    <span class="inst-name">SOFTEX</span>
+                                    <span class="inst-course">Residência TrendsIT</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="habilidades" class="skills-section">
-            <div class="container">
-                <h2 class="section-title">Competências</h2>
-                <div class="skills-grid">
-                    <article class="skill-card">
-                        <h3>Linguagens & Front/Back</h3>
-                        <ul>
-                            <li>Node.js & JavaScript Vanilla</li>
-                            <li>Delphi & Pascal</li>
-                            <li>Python & Flask</li>
-                            <li>React / Next.js</li>
-                            <li>HTML5 Semântico & CSS3</li>
-                        </ul>
-                    </article>
-                    <article class="skill-card">
-                        <h3>Cloud & Infraestrutura</h3>
-                        <ul>
-                            <li>Bancos Relacionais (SQL, PostgreSQL)</li>
-                            <li>AWS Solutions Architect Assoc.</li>
-                            <li>Autenticação Segura (JWT)</li>
-                            <li>Docker & Git</li>
-                            <li>Power BI & Modelagem de Dados</li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
+        <!-- =========================================
+             SEÇÃO DE TRAJETÓRIA PROFISSIONAL (TIMELINE)
+             ========================================= -->
         <section id="experiencia" class="experience-section">
             <div class="container">
-                <h2 class="section-title">Trajetória Profissional</h2>
-                <div class="timeline">
-                    <!-- iBati Experience -->
-                    <article class="timeline-item">
-                        <div class="timeline-img">
-                            <img src="./img/experiencia-ibati.jpg" alt="iBati">
-                        </div>
-                        <div class="timeline-content">
-                            <h3>Desenvolvedor Web</h3>
-                            <span class="date">iBati | Soluções para Riscos e Sinistros</span>
-                            <p>Atuação no desenvolvimento da plataforma web do iBati, englobando a construção do front-end, lógica de back-end e implementações de CDN. <br><br>
-                        </div>
-                    </article>
+                <div class="section-header-centered">
+                    <span class="section-tag">Carreira & Atuação</span>
+                    <h2 class="section-title">Trajetória Profissional</h2>
+                    <p class="section-subtitle">
+                        Experiência sólida na indústria de software, liderança executiva e desenvolvimento corporativo.
+                    </p>
+                </div>
 
-                    <!-- Asa Sistemas / Despa -->
-                    <article class="timeline-item">
-                        <div class="timeline-img">
-                            <img src="./img/experiencia_asa.png" alt="Despa Tecnologia">
+                <div class="timeline-v2">
+                    <!-- 1. Grupo Oikawa Empreendimentos -->
+                    <div class="timeline-block current-role">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-box">
+                            <div class="timeline-box-header">
+                                <div>
+                                    <span class="timeline-badge executive-badge">Diretoria Executiva</span>
+                                    <h3 class="timeline-role">Sócio Administrador & Diretor Executivo</h3>
+                                    <h4 class="timeline-company">OIKAWA EMPREENDIMENTOS LTDA &bull; Grupo Oikawa</h4>
+                                </div>
+                                <span class="timeline-period">Ago 2024 — Presente</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Gestão estratégica corporativa e direcionamento tecnológico de 5 unidades de negócios (GO Tech, GO Academy, GO Consórcio, GO Editora e Nyro Games). Responsável por novos produtos digitais, fechamento de parcerias estratégicas, captação de clientes, conformidade jurídica e arquitetura de soluções computacionais sob medida para o mercado nacional.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>Gestão Executiva</span>
+                                    <span>Cloud & APIs</span>
+                                    <span>Inovação de Negócios</span>
+                                    <span>Liderança Multidisciplinar</span>
+                                </div>
+                                <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="timeline-inline-link">
+                                    Acessar portal institucional da empresa ↗
+                                </a>
+                            </div>
                         </div>
-                        <div class="timeline-content">
-                            <h3>Desenvolvedor de Software</h3>
-                            <span class="date">Asa Sistemas / Despa Tecnologia</span>
-                            <p>Sustentação e evolução arquitetural da plataforma DespaFront para Windows, programada em Delphi/Pascal. Integrações sistêmicas complexas com os demais produtos do grupo.</p>
-                        </div>
-                    </article>
+                    </div>
 
-                    <!-- GO Tech -->
-                    <article class="timeline-item">
-                        <div class="timeline-img">
-                            <img src="./img/experiencia_gotech.png" alt="GO Tech">
+                    <!-- 2. ART IT Intelligent Technology -->
+                    <div class="timeline-block current-role">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-box">
+                            <div class="timeline-box-header">
+                                <div>
+                                    <span class="timeline-badge tech-badge">Residência Tecnológica</span>
+                                    <h3 class="timeline-role">Desenvolvedor Full Stack (Bolsista Residente)</h3>
+                                    <h4 class="timeline-company">ART IT Intelligent Technology &bull; Campinas / SP</h4>
+                                </div>
+                                <span class="timeline-period">Set 2026 — Presente</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Residência profissional financiada por bolsa pela <strong>SOFTEX</strong> no programa <strong>TrendsIT 2026</strong>. Atuação em squads ágeis no desenvolvimento de features completas de front-end e back-end, elicitação e análise de requisitos, elaboração de documentações técnicas de arquitetura e rigoroso processo de Avaliação por Pares (Peer Review) para garantia de qualidade e escalabilidade.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>Full Stack</span>
+                                    <span>TrendsIT SOFTEX</span>
+                                    <span>Code Review</span>
+                                    <span>Scrum / Kanban</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="timeline-content">
-                            <h3>Fundador & Diretor</h3>
-                            <span class="date">GO Tech</span>
-                            <p>Fundei a GO Tech para atuar no ramo de tecnologia, oferecendo cursos, produtos eletrônicos e consultoria em TI. Atuei diretamente no desenvolvimento de integrações entre WhatsApp e sistemas de CRM utilizando Python e Flask, além do uso de conceitos de PWA.</p>
+                    </div>
+
+                    <!-- 3. Despa Tecnologia / AsA Sistemas -->
+                    <div class="timeline-block">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-box">
+                            <div class="timeline-box-header">
+                                <div>
+                                    <span class="timeline-badge legacy-badge">Engenharia de Sistemas</span>
+                                    <h3 class="timeline-role">Desenvolvedor de Software</h3>
+                                    <h4 class="timeline-company">Despa Tecnologia / AsA Sistemas &bull; Dracena / SP</h4>
+                                </div>
+                                <span class="timeline-period">Jun 2024 — Abr 2026 (1 ano 11 meses)</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Desenvolvimento e manutenção evolutiva em <strong>Delphi / Object Pascal</strong> do ecossistema DespaFront, sistema ERP corporativo especializado no segmento de trânsito, frotas e despachantes. Otimização de consultas em bancos relacionais e integração com módulos de emissão e serviços legados. Anteriormente atuei como <strong>Suporte Técnico</strong> remoto (Abr 2024 — Jun 2024), solucionando incidentes operacionais complexos e reduzindo tempos de resposta.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>Delphi</span>
+                                    <span>Object Pascal</span>
+                                    <span>SQL / Bancos Relacionais</span>
+                                    <span>Software Desktop</span>
+                                </div>
+                            </div>
                         </div>
-                    </article>
+                    </div>
+
+                    <!-- 4. Worxbase -->
+                    <div class="timeline-block">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-box">
+                            <div class="timeline-box-header">
+                                <div>
+                                    <span class="timeline-badge freelance-badge">Projetos Freelancer</span>
+                                    <h3 class="timeline-role">Desenvolvedor Freelancer</h3>
+                                    <h4 class="timeline-company">Worxbase &bull; Campinas / SP</h4>
+                                </div>
+                                <span class="timeline-period">Abr 2025 — Out 2025 (7 meses)</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Atendimento a demandas sob medida de desenvolvimento e modernização de interfaces web, integrações de APIs REST e soluções sob medida para clientes corporativos com foco em agilidade e entrega pontual.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>JavaScript</span>
+                                    <span>Node.js</span>
+                                    <span>React</span>
+                                    <span>APIs</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. iBati -->
+                    <div class="timeline-block">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-box">
+                            <div class="timeline-box-header">
+                                <div>
+                                    <span class="timeline-badge junior-badge">Desenvolvimento Web</span>
+                                    <h3 class="timeline-role">Desenvolvedor Web Júnior</h3>
+                                    <h4 class="timeline-company">iBati &bull; Presidente Prudente / SP</h4>
+                                </div>
+                                <span class="timeline-period">Jan 2024 — Abr 2024 (4 meses)</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    Construção da plataforma web da startup focada em regulação e sinistros automotivos, englobando implementação do front-end responsivo, lógica de back-end e provisionamento de CDN para distribuição de arquivos de mídia em alta performance. (Atuou anteriormente em Atendimento Técnico a Sinistros, Jul 2023 — Jan 2024).
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>Front-end</span>
+                                    <span>Back-end</span>
+                                    <span>CDN</span>
+                                    <span>UX Otimizada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. Experiências Formativas (Biblioteca / Energisa / IBGE) -->
+                    <div class="timeline-block">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-box">
+                            <div class="timeline-box-header">
+                                <div>
+                                    <span class="timeline-badge public-badge">Setor Público & Infraestrutura</span>
+                                    <h3 class="timeline-role">Estágio de Informática & Aprendiz Administrativo</h3>
+                                    <h4 class="timeline-company">Prefeitura de Rancharia &bull; Energisa Sul-Sudeste &bull; IBGE</h4>
+                                </div>
+                                <span class="timeline-period">2022 — 2023</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>
+                                    <strong>Prefeitura de Rancharia:</strong> Desenvolvimento de sistema interno de controle de atendimento ao cidadão para a Biblioteca Municipal.<br>
+                                    <strong>Energisa Sul-Sudeste:</strong> Apoio administrativo à Coordenação de Equipes de Campo (financeiro, almoxarifado, movimentação de medidores e ordens de serviço).<br>
+                                    <strong>IBGE:</strong> Recenseador no Censo Demográfico 2022 aprovado em concurso público.
+                                </p>
+                                <div class="timeline-tags">
+                                    <span>Sistemas de Atendimento</span>
+                                    <span>Gestão Operacional</span>
+                                    <span>Censo IBGE</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- =========================================
+             SEÇÃO DE PESQUISA CIENTÍFICA & OLIMPÍADAS
+             ========================================= -->
+        <section id="pesquisa" class="research-section">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-tag">Rigor Metodológico</span>
+                    <h2 class="section-title">Pesquisa Científica & Iniciação Tecnológica</h2>
+                    <p class="section-subtitle">
+                        Investigação acadêmica com apoio institucional (CNPq / PIBIC / UNESP / IFSP), publicações em anais e premiações nacionais.
+                    </p>
+                </div>
+
+                <!-- Destaques de Pesquisa Científica -->
+                <div class="research-grid">
+                    <div class="research-card">
+                        <div class="research-card-icon">🧬</div>
+                        <div class="research-card-content">
+                            <span class="research-tag">UNESP Dracena (2024 - 2025)</span>
+                            <h3>Simulação Genética e Reprodutibilidade de Dados em R</h3>
+                            <p>
+                                Desenvolvimento de pacote e funções no <strong>software R</strong> para simulação e formatação de pedigree animal em análises de avaliação genética, garantindo reprodutibilidade experimental e integridade computacional de grandes volumes de dados.
+                            </p>
+                            <span class="research-status">Apresentado no XXXVII Congresso de Iniciação Científica da UNESP</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-card-icon">⚡</div>
+                        <div class="research-card-content">
+                            <span class="research-tag">PIBIC EM / CNPq &bull; UNESP Tupã (2021)</span>
+                            <h3>Automação IoT de Reator de Biodiesel com Arduino</h3>
+                            <p>
+                                Estruturação de hardware e desenvolvimento de aplicativo móvel Android para controle e monitoramento remoto de um reator físico de biodiesel. Alinhado ao <strong>ODS 9 da ONU (Indústria, Inovação e Infraestrutura)</strong> com bolsas CNPq/MCTI.
+                            </p>
+                            <span class="research-status">Apresentado no XXXIII Congresso de Iniciação Científica da UNESP</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-card-icon">🛰️</div>
+                        <div class="research-card-content">
+                            <span class="research-tag">PIBIFSP &bull; IFSP Tupã (2020)</span>
+                            <h3>Supervisão de Irrigação Agrícola com Drones (VANT)</h3>
+                            <p>
+                                Estudo da viabilidade de Veículos Aéreos Não-Tripulados integrados a sistemas embarcados para supervisão inteligente de recursos hídricos e irrigação em unidades agrícolas da região paulista.
+                            </p>
+                            <span class="research-status">Publicado no 12º Congresso de Inovação, Ciência e Tecnologia (CONICT)</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-card-icon">🔬</div>
+                        <div class="research-card-content">
+                            <span class="research-tag">Publicação em Periódico &bull; RBIC (2021)</span>
+                            <h3>Ligas de Titânio para Aplicações Biomédicas</h3>
+                            <p>
+                                Coautoria de artigo científico avaliando a densidade volumétrica e dureza mecânica de ligas de titânio (TiNbMo) para biocompatibilidade na <strong>Revista Brasileira de Iniciação Científica</strong>.
+                            </p>
+                            <span class="research-status">Artigo Completo: RBIC, v. 8, p. 1-18, 2021</span>
+                        </div>
+                    </div>
+
+                    <div class="research-card">
+                        <div class="research-card-icon">❄️</div>
+                        <div class="research-card-content">
+                            <span class="research-tag">TCC UNIVESP (2022 - 2025)</span>
+                            <h3>Plataforma IoT de Baixo Custo para Gestão Frigorífica</h3>
+                            <p>
+                                Concepção e implantação de ecossistema IoT com sensores de temperatura, umidade e presença em geladeiras comerciais, otimizando o controle de estoque em tempo real e reduzindo o desperdício alimentar.
+                            </p>
+                            <span class="research-status">Trabalho de Conclusão de Curso com Orientação Docente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeria de Prêmios & Medalhas Olímpicas -->
+                <div class="awards-wrapper">
+                    <h3 class="awards-title">
+                        <span>🏆</span> Medalhas em Olimpíadas do Conhecimento & Destaques Acadêmicos
+                    </h3>
+                    <div class="awards-grid">
+                        <div class="award-card gold">
+                            <div class="award-badge">🥇 Ouro</div>
+                            <h4>XX OBA (2017)</h4>
+                            <p>Olimpíada Brasileira de Astronomia e Astronáutica</p>
+                        </div>
+                        <div class="award-card silver">
+                            <div class="award-badge">🥈 Prata</div>
+                            <h4>III OMIF (2020)</h4>
+                            <p>Olimpíada de Matemática dos Institutos Federais</p>
+                        </div>
+                        <div class="award-card silver">
+                            <div class="award-badge">🥈 Prata</div>
+                            <h4>IV & V ONC (2019 / 2020)</h4>
+                            <p>Olimpíada Nacional de Ciências (Bi-Medalhista)</p>
+                        </div>
+                        <div class="award-card silver">
+                            <div class="award-badge">🥈 Prata</div>
+                            <h4>5ª OGB (2019)</h4>
+                            <p>Olimpíada GeoBrasil — Etapa Estadual de SP</p>
+                        </div>
+                        <div class="award-card bronze">
+                            <div class="award-badge">🥉 Bronze</div>
+                            <h4>OBMEP (2021)</h4>
+                            <p>Olimpíada Brasileira de Matemática das Escolas Públicas</p>
+                        </div>
+                        <div class="award-card bronze">
+                            <div class="award-badge">🥉 Bronze</div>
+                            <h4>OBR Teórica (2020)</h4>
+                            <p>Olimpíada Brasileira de Robótica — Etapa Nacional</p>
+                        </div>
+                        <div class="award-card special">
+                            <div class="award-badge">🎖️ Destaque</div>
+                            <h4>CUCo USP (2021)</h4>
+                            <p>Melhor Desempenho 3ª Série EM — USP Conhecimentos</p>
+                        </div>
+                        <div class="award-card special">
+                            <div class="award-badge">🎖️ Top 100</div>
+                            <h4>OQSP (2021)</h4>
+                            <p>Olimpíada de Química do Estado de São Paulo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificações Oficiais -->
+                <div class="certs-section-box">
+                    <h3 class="certs-title">
+                        <span>📜</span> Principais Certificações Técnicas Oficiais
+                    </h3>
+                    <div class="certs-grid">
+                        <div class="cert-pill">
+                            <span class="cert-icon">☁️</span>
+                            <div>
+                                <strong>AWS Certified Solutions Architect</strong>
+                                <span>Amazon Web Services (Associate)</span>
+                            </div>
+                        </div>
+                        <div class="cert-pill">
+                            <span class="cert-icon">🔷</span>
+                            <div>
+                                <strong>Microsoft Azure Fundamentals</strong>
+                                <span>Microsoft Certified (AZ-900)</span>
+                            </div>
+                        </div>
+                        <div class="cert-pill">
+                            <span class="cert-icon">🛡️</span>
+                            <div>
+                                <strong>Cisco Cybersecurity Essentials</strong>
+                                <span>Cisco Networking Academy</span>
+                            </div>
+                        </div>
+                        <div class="cert-pill">
+                            <span class="cert-icon">⚡</span>
+                            <div>
+                                <strong>Scrum Foundation Professional (SFPC)</strong>
+                                <span>CertiProf Certified</span>
+                            </div>
+                        </div>
+                        <div class="cert-pill">
+                            <span class="cert-icon">🐍</span>
+                            <div>
+                                <strong>Python Essentials 1</strong>
+                                <span>Python Institute & Cisco</span>
+                            </div>
+                        </div>
+                        <div class="cert-pill">
+                            <span class="cert-icon">🚀</span>
+                            <div>
+                                <strong>Embaixador DIO Campus Expert</strong>
+                                <span>Turmas 12 e 15 &bull; Comunidade & Inovação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SEÇÃO DE COMPETÊNCIAS & STACK
+             ========================================= -->
+        <section id="habilidades" class="skills-section">
+            <div class="container">
+                <div class="section-header-centered">
+                    <span class="section-tag">Stack & Ferramentas</span>
+                    <h2 class="section-title">Competências Técnicas & Ferramentas</h2>
+                    <p class="section-subtitle">
+                        Domínio prático em desenvolvimento de ponta a ponta, infraestrutura resiliente e metodologias ágeis.
+                    </p>
+                </div>
+
+                <div class="skills-matrix">
+                    <!-- Front-End Moderno -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <span class="cat-icon">🎨</span>
+                            <h3>Front-End & Interfaces</h3>
+                        </div>
+                        <p class="cat-desc">Aplicações responsivas, acessíveis e focadas em performance e excelente experiência do usuário.</p>
+                        <div class="tags-cloud">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">JavaScript (ES6+)</span>
+                            <span class="tech-tag">HTML5 Semântico</span>
+                            <span class="tech-tag">CSS3 / Flexbox / Grid</span>
+                            <span class="tech-tag">PWA</span>
+                            <span class="tech-tag">Design Systems</span>
+                        </div>
+                    </div>
+
+                    <!-- Back-End & Desktop Core -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <span class="cat-icon">⚙️</span>
+                            <h3>Back-End & Sistemas</h3>
+                        </div>
+                        <p class="cat-desc">Arquitetura de microsserviços, estabilidade transacional e desenvolvimento desktop de alta velocidade.</p>
+                        <div class="tags-cloud">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Python & Flask</span>
+                            <span class="tech-tag">Delphi / Object Pascal</span>
+                            <span class="tech-tag">RESTful APIs</span>
+                            <span class="tech-tag">Autenticação JWT</span>
+                            <span class="tech-tag">CDN & Caching</span>
+                            <span class="tech-tag">Arquitetura MVC / Clean</span>
+                        </div>
+                    </div>
+
+                    <!-- Cloud, DevOps & Dados -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <span class="cat-icon">☁️</span>
+                            <h3>Cloud, DevOps & Dados</h3>
+                        </div>
+                        <p class="cat-desc">Infraestrutura em nuvem, bancos de dados relacionais e modelagem com governança LGPD.</p>
+                        <div class="tags-cloud">
+                            <span class="tech-tag">AWS (Solutions Architect)</span>
+                            <span class="tech-tag">Microsoft Azure</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Git & GitHub</span>
+                            <span class="tech-tag">MySQL & PostgreSQL</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Governança LGPD</span>
+                        </div>
+                    </div>
+
+                    <!-- Hardware, IoT & Automações -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <span class="cat-icon">🤖</span>
+                            <h3>IoT, Automação & IA</h3>
+                        </div>
+                        <p class="cat-desc">Sistemas embarcados, sensores em tempo real, orquestração de workflows e aprendizado de máquina.</p>
+                        <div class="tags-cloud">
+                            <span class="tech-tag">Internet das Coisas (IoT)</span>
+                            <span class="tech-tag">Arduino & Microcontroladores</span>
+                            <span class="tech-tag">Automação com N8N</span>
+                            <span class="tech-tag">Linguagem R (Estatística)</span>
+                            <span class="tech-tag">Machine Learning (IA-102)</span>
+                            <span class="tech-tag">Eletrônica Aplicada</span>
+                        </div>
+                    </div>
+
+                    <!-- Gestão & Liderança -->
+                    <div class="skill-category-card">
+                        <div class="skill-cat-header">
+                            <span class="cat-icon">👥</span>
+                            <h3>Gestão, Ágil & Liderança</h3>
+                        </div>
+                        <p class="cat-desc">Governança corporativa, metodologias ágeis e capacidade analítica em negociações complexas.</p>
+                        <div class="tags-cloud">
+                            <span class="tech-tag">Scrum Foundation</span>
+                            <span class="tech-tag">Code Review & Peer Assessment</span>
+                            <span class="tech-tag">Captação via Editais</span>
+                            <span class="tech-tag">Gestão de Equipes Remotas</span>
+                            <span class="tech-tag">Comunicação Executiva</span>
+                            <span class="tech-tag">Administração Estratégica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SEÇÃO DE PORTFÓLIO & PROJETOS
+             ========================================= -->
         <section id="portfolio" class="portfolio-section">
             <div class="container">
-                <h2 class="section-title">Projetos & Portfólio</h2>
-                <p class="section-subtitle">Aplicações Full Stack desenvolvidas com foco em resolução de problemas e regras de negócios complexas.</p>
-                
-                <div class="portfolio-grid">
-                    <!-- BioLink Pro -->
-                    <article class="portfolio-card">
-                        <div class="card-thumb">🔗</div>
-                        <div class="card-info">
-                            <h3>BioLink Pro</h3>
-                            <p>Cartão de visitas digital responsivo com abordagem Mobile-First. Construído com HTML5 Semântico e CSS3 (Flexbox), entregando alta performance e identidade visual otimizada sem uso de frameworks.</p>
-                            <a href="https://github.com/lucas-satoshi" target="_blank" class="btn-outline">Ver Repositório</a>
+                <div class="section-header-centered">
+                    <span class="section-tag">Engenharia em Prática</span>
+                    <h2 class="section-title">Projetos & Portfólio</h2>
+                    <p class="section-subtitle">
+                        Aplicações e soluções construídas para sanar regras de negócio desafiadoras e entregar alto valor prático.
+                    </p>
+                </div>
+
+                <!-- Filtros Interativos por Categoria -->
+                <div class="portfolio-filters" role="tablist" aria-label="Filtro de Projetos">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                    <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full Stack & Web</button>
+                    <button class="filter-btn" data-filter="systems" role="tab" aria-selected="false">Sistemas & APIs</button>
+                    <button class="filter-btn" data-filter="iot-research" role="tab" aria-selected="false">IoT & Pesquisa</button>
+                </div>
+
+                <!-- Grade de Projetos -->
+                <div class="portfolio-grid" id="projects-grid">
+                    <!-- Projeto: Portal Grupo Oikawa -->
+                    <article class="portfolio-card highlight-project" data-category="fullstack">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">Holding & Negócios</span>
+                            <span class="project-status-chip live-chip">● Online</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Portal Corporativo Grupo Oikawa</h3>
+                            <p class="card-desc">
+                                Portal institucional dinâmico para a holding OIKAWA EMPREENDIMENTOS LTDA, apresentando suas 5 unidades operacionais com agendamento de diagnósticos e SEO estruturado.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>TypeScript</span>
+                                <span>React</span>
+                                <span>Tailwind</span>
+                                <span>Cloudflare</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="btn-card-primary">
+                                Visitar Site Oficial ↗
+                            </a>
                         </div>
                     </article>
 
-                    <!-- SmartCash -->
-                    <article class="portfolio-card">
-                        <div class="card-thumb">💰</div>
-                        <div class="card-info">
-                            <h3>SmartCash</h3>
-                            <p>Dashboard financeiro interativo (SPA) criado com JavaScript Vanilla. Permite registrar receitas/despesas, calcula saldo em tempo real e utiliza LocalStorage para persistência de dados local segura.</p>
-                            <a href="https://github.com/lucas-satoshi" target="_blank" class="btn-outline">Ver Repositório</a>
+                    <!-- Projeto: SpaceHub -->
+                    <article class="portfolio-card" data-category="fullstack">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">Full Stack</span>
+                            <span class="project-status-chip">Concluído</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">SpaceHub &bull; Gestão de Locações</h3>
+                            <p class="card-desc">
+                                Plataforma web completa para reserva de espaços comerciais. Conta com painel de anfitrião, motor de verificação de disponibilidade em banco de dados e prevenção contra overbooking.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>Node.js</span>
+                                <span>Express</span>
+                                <span>PostgreSQL</span>
+                                <span>JWT Auth</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/lucas-satoshi" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                                Ver Código no GitHub
+                            </a>
                         </div>
                     </article>
 
-                    <!-- EasyDesk -->
-                    <article class="portfolio-card">
-                        <div class="card-thumb">🛠️</div>
-                        <div class="card-info">
-                            <h3>EasyDesk</h3>
-                            <p>Sistema inteligente de Help Desk que organiza o fluxo de suporte técnico. Filtra dinamicamente os chamados por status (Pendente, Em Progresso, Concluído) usando manipulação avançada de DOM, arrays e objetos no client-side.</p>
-                            <a href="https://github.com/lucas-satoshi" target="_blank" class="btn-outline">Ver Repositório</a>
+                    <!-- Projeto: ConnectHub -->
+                    <article class="portfolio-card" data-category="systems">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">Sistemas & APIs</span>
+                            <span class="project-status-chip">Concluído</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">ConnectHub API &bull; Microsserviço</h3>
+                            <p class="card-desc">
+                                API RESTful robusta e modular com autenticação via tokens JWT, validação de requisições, logging estruturado e conexão otimizada a banco de dados relacional SQL.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>Node.js</span>
+                                <span>SQL</span>
+                                <span>JWT</span>
+                                <span>Clean Arch</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/lucas-satoshi" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                                Ver Código no GitHub
+                            </a>
                         </div>
                     </article>
 
-                    <!-- ConnectHub -->
-                    <article class="portfolio-card">
-                        <div class="card-thumb">☁️</div>
-                        <div class="card-info">
-                            <h3>ConnectHub</h3>
-                            <p>API robusta e segura feita em Node.js com integração a um banco de dados relacional SQL. Implementa operações completas de CRUD e utiliza tokens JWT para proteção e autorização de requisições.</p>
-                            <a href="https://github.com/lucas-satoshi" target="_blank" class="btn-outline">Ver Repositório</a>
+                    <!-- Projeto: SmartCash -->
+                    <article class="portfolio-card" data-category="fullstack">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">Finanças & SPA</span>
+                            <span class="project-status-chip">Concluído</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">SmartCash &bull; Dashboard Financeiro</h3>
+                            <p class="card-desc">
+                                Aplicação Single-Page (SPA) interativa para controle de fluxo de caixa e finanças pessoais. Cálculos dinâmicos e armazenamento local seguro com LocalStorage.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>JavaScript Vanilla</span>
+                                <span>HTML5</span>
+                                <span>CSS3 Moderno</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/lucas-satoshi" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                                Ver Código no GitHub
+                            </a>
                         </div>
                     </article>
 
-                    <!-- SpaceHub -->
-                    <article class="portfolio-card">
-                        <div class="card-thumb">🏢</div>
-                        <div class="card-info">
-                            <h3>SpaceHub</h3>
-                            <p>Plataforma Full-Stack voltada para gestão de locações de espaços. Conta com painel de anfitrião, perfis dinâmicos de hóspedes e um motor de disponibilidade no banco de dados projetado para evitar overbooking de calendários.</p>
-                            <a href="https://github.com/lucas-satoshi" target="_blank" class="btn-outline">Ver Repositório</a>
+                    <!-- Projeto: EasyDesk -->
+                    <article class="portfolio-card" data-category="systems">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">Suporte & CRM</span>
+                            <span class="project-status-chip">Concluído</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">EasyDesk &bull; Help Desk Inteligente</h3>
+                            <p class="card-desc">
+                                Sistema de triagem e gestão de chamados com classificação dinâmica por status e prioridade, facilitando a visualização ágil das demandas do setor de suporte.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>JavaScript ES6+</span>
+                                <span>DOM Reativo</span>
+                                <span>UI Moderna</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/lucas-satoshi" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                                Ver Código no GitHub
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto: Plataforma IoT Frigorífica -->
+                    <article class="portfolio-card" data-category="iot-research">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">IoT & TCC UNIVESP</span>
+                            <span class="project-status-chip">Pesquisa</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Plataforma IoT de Gestão Frigorífica</h3>
+                            <p class="card-desc">
+                                Sistema integrado com sensores de baixo custo para monitoramento térmico em tempo real e redução de perdas de perecíveis em geladeiras comerciais de mercados.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>Arduino / ESP</span>
+                                <span>Sensores IoT</span>
+                                <span>Telemetria Cloud</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="http://lattes.cnpq.br/8887073539480367" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                                Consultar no Lattes
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto: Simulador Genético em R -->
+                    <article class="portfolio-card" data-category="iot-research">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">Ciência de Dados & R</span>
+                            <span class="project-status-chip">UNESP Dracena</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Simulador de Pedigree Genético em R</h3>
+                            <p class="card-desc">
+                                Conjunto de funções estatísticas no software R para simulação de gerações sucessivas a partir de estruturas genealógicas conhecidas, aumentando a reprodutibilidade.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>Linguagem R</span>
+                                <span>Estatística</span>
+                                <span>Data Science</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="http://lattes.cnpq.br/8887073539480367" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                                Anais XXXVII CIC UNESP
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Projeto: BioLink Pro -->
+                    <article class="portfolio-card" data-category="fullstack">
+                        <div class="card-top-bar">
+                            <span class="project-category-chip">Performance Web</span>
+                            <span class="project-status-chip">Concluído</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">BioLink Pro &bull; Hub Mobile-First</h3>
+                            <p class="card-desc">
+                                Agregador digital ultra-rápido com pontuação 100/100 no Lighthouse, desenhado especificamente para conexões móveis sem o overhead de bibliotecas pesadas.
+                            </p>
+                            <div class="card-tech-stack">
+                                <span>HTML5 Semântico</span>
+                                <span>CSS3 Puro</span>
+                                <span>Mobile-First</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/lucas-satoshi" target="_blank" rel="noopener noreferrer" class="btn-card-outline">
+                                Ver Código no GitHub
+                            </a>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
+        <!-- =========================================
+             SEÇÃO DE CONTATO & CANAIS DIRETOS
+             ========================================= -->
         <section id="contato" class="contact-section">
             <div class="container">
-                <h2 class="section-title">Contato</h2>
-                <div class="contact-wrapper">
-                    <div class="contact-info">
-                        <h3>Vamos conversar sobre inovação?</h3>
-                        <p>Estou sempre aberto para discutir colaborações de projetos, desafios tech e oportunidades.</p>
-                        <ul class="contact-details">
-                            <li><strong>Email:</strong> lucas.satoshi.18@gmail.com</li>
-                            <li><strong>Local:</strong> Rio de Janeiro, RJ - Brasil</li>
-                        </ul>
+                <div class="section-header-centered">
+                    <span class="section-tag">Canais Diretos</span>
+                    <h2 class="section-title">Vamos Conectar e Inovar Juntos?</h2>
+                    <p class="section-subtitle">
+                        Disponível para projetos corporativos, diagnósticos de TI para empresas, consultoria e novos desafios em engenharia de software.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Coluna de Informações e Cartões de Contato -->
+                    <div class="contact-cards-column">
+                        <div class="contact-info-card">
+                            <div class="contact-card-icon">🏢</div>
+                            <div>
+                                <h4>Grupo Oikawa Empreendimentos</h4>
+                                <p>OIKAWA EMPREENDIMENTOS LTDA &bull; CNPJ 57.030.230/0001-10</p>
+                                <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="contact-link">
+                                    goempreendimentos.com ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-card-icon">💬</div>
+                            <div>
+                                <h4>WhatsApp Direto</h4>
+                                <p>Atendimento comercial e técnico imediato</p>
+                                <a href="https://wa.me/5521920023944?text=Ol%C3%A1%20Lucas%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="contact-link">
+                                    +55 (21) 92002-3944 ↗
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-card-icon">✉️</div>
+                            <div>
+                                <h4>E-mail de Contato</h4>
+                                <p>Propostas, projetos e solicitações acadêmicas</p>
+                                <a href="mailto:lucas.satoshi.18@gmail.com" class="contact-link">
+                                    lucas.satoshi.18@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-card-icon">📍</div>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>Av. das Américas 4200, Bloco 01, Sala 305 &bull; Barra da Tijuca, Rio de Janeiro / RJ &bull; Atuação Nacional</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-form-container">
-                        <form action="https://formspree.io/f/xbjejqvo" method="POST" class="form">
-                            <div class="input-group">
-                                <label for="nome">Nome Completo:</label>
-                                <input type="text" id="nome" name="name" required>
+
+                    <!-- Formulário de Envio Operacional via Formspree -->
+                    <div class="contact-form-card">
+                        <h3 class="form-title">Envie uma Mensagem</h3>
+                        <p class="form-desc">Preencha o formulário abaixo para receber um retorno rápido diretamente no seu e-mail.</p>
+                        
+                        <form action="https://formspree.io/f/xbjejqvo" method="POST" class="operational-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="form-name">Nome Completo *</label>
+                                <input type="text" id="form-name" name="name" placeholder="Ex.: Mariana Silva" required>
                             </div>
-                            <div class="input-group">
-                                <label for="email">E-mail:</label>
-                                <input type="email" id="email" name="email" required>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-email">E-mail Profissional *</label>
+                                    <input type="email" id="form-email" name="email" placeholder="mariana@empresa.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="form-phone">Telefone / WhatsApp</label>
+                                    <input type="tel" id="form-phone" name="phone" placeholder="(21) 90000-0000">
+                                </div>
                             </div>
-                            <div class="input-group">
-                                <label for="telefone">Telefone (Opcional):</label>
-                                <input type="tel" id="telefone" name="phone">
+
+                            <div class="form-group">
+                                <label for="form-subject">Assunto Principal *</label>
+                                <select id="form-subject" name="subject" required class="form-select">
+                                    <option value="" disabled selected>Selecione um assunto...</option>
+                                    <option value="Consultoria / Diagnóstico Tech (Grupo Oikawa)">Consultoria / Diagnóstico Tech (Grupo Oikawa)</option>
+                                    <option value="Proposta de Software / Desenvolvimento Full Stack">Proposta de Software / Desenvolvimento Full Stack</option>
+                                    <option value="Oportunidade Profissional / Recrutamento">Oportunidade Profissional / Recrutamento</option>
+                                    <option value="Pesquisa Científica / Colaboração Acadêmica">Pesquisa Científica / Colaboração Acadêmica</option>
+                                    <option value="Outro assunto">Outro assunto</option>
+                                </select>
                             </div>
-                            <div class="input-group">
-                                <label for="mensagem">Mensagem:</label>
-                                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                            <div class="form-group">
+                                <label for="form-message">Mensagem Detalhada *</label>
+                                <textarea id="form-message" name="message" rows="4" placeholder="Conte brevemente sobre o seu projeto ou necessidade..." required></textarea>
                             </div>
-                            <button type="submit" class="btn-primary">Enviar Mensagem</button>
+
+                            <button type="submit" class="btn-primary full-width" id="form-submit-btn">
+                                <span>Enviar Mensagem</span>
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                            </button>
+                            <div id="form-status" class="form-status-msg" aria-live="polite"></div>
                         </form>
                     </div>
                 </div>
@@ -235,10 +1299,52 @@
         </section>
     </main>
 
+    <!-- =========================================
+         FOOTER EXECUTIVO
+         ========================================= -->
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Lucas Satoshi Cipriano Oikawa.</p>
+        <div class="container footer-container">
+            <div class="footer-top-row">
+                <div class="footer-brand">
+                    <span class="logo-mark">LS</span>
+                    <span class="footer-brand-title">Lucas Satoshi Cipriano Oikawa</span>
+                    <p class="footer-brand-sub">
+                        Engenharia de Software, Liderança Executiva & Inovação Científica.
+                    </p>
+                </div>
+                <div class="footer-company-highlight">
+                    <span class="footer-label">EMPRESA OFICIAL:</span>
+                    <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer" class="footer-company-link">
+                        <strong>Grupo Oikawa Empreendimentos</strong> (goempreendimentos.com) ↗
+                    </a>
+                    <span class="footer-cnpj">OIKAWA EMPREENDIMENTOS LTDA &bull; CNPJ 57.030.230/0001-10</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <p class="footer-copy">
+                    &copy; 2026 Lucas Satoshi Cipriano Oikawa. Todos os direitos reservados.
+                </p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/lucas-oikawa" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/lucas-satoshi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="http://lattes.cnpq.br/8887073539480367" target="_blank" rel="noopener noreferrer">Lattes CNPq</a>
+                    <a href="https://orcid.org/0000-0003-2921-8997" target="_blank" rel="noopener noreferrer">ORCID</a>
+                    <a href="https://goempreendimentos.com/" target="_blank" rel="noopener noreferrer">goempreendimentos.com</a>
+                </div>
+                <p class="footer-tech-tag">
+                    Hospedado via <strong>GitHub Pages</strong> &bull; Alta Performance Semântica
+                </p>
+            </div>
         </div>
     </footer>
+
+    <!-- Botão de Voltar ao Topo -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao início da página" title="Voltar ao topo">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>
+    </button>
+
+    <!-- Scripts da Aplicação -->
+    <script src="./script.js"></script>
 </body>
 </html>
